@@ -14,7 +14,7 @@ I am broadly interested in **Biostatistics** and **Epidemiology**, with a partic
 1. **Fan, Y., Cigsar, C. (2025).** *Quantile Regression with Bivariate Sequential Data.*  2025 *Statistical Society of Canada Annual Meeting*.
 
 
-# Scripts
+# Manuscripts
 1. **Li, X., Fan, Y., Cheng, S.** (2023). *AIGC in China: Current developments and future outlook*. https://arxiv.org/pdf/2308.08451
 
 
