@@ -1,28 +1,650 @@
-<h1>Yuqing Fan</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p><strong>PhD Student, Memorial University of Newfoundland</strong></p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>
-  <small>
-    <a href="mailto:yqfan@uwaterloo.ca">yqfan@uwaterloo.ca</a> (old)
-    &nbsp;•&nbsp;
-    <a href="mailto:yuqingf@mun.ca">yuqingf@mun.ca</a> (current)
-  </small>
-</p>
+  <title>Yuqing Fan | Statistics</title>
 
-<p>
-  Hi! I am a PhD student in Statistics at Memorial University of Newfoundland (MUN).
-  I completed my MSc in Statistics at MUN before beginning my PhD.
-  Prior to joining MUN, I obtained my Bachelor of Mathematics degree from the
-  University of Waterloo.
-</p>
+  <style>
 
-<h3>Navigate</h3>
+    /* =========================================================
+       GENERAL
+       ========================================================= */
 
-<p>
-  <a href="education.html"><strong>Education</strong></a>
-  &nbsp;•&nbsp;
-  <a href="research.html"><strong>Research</strong></a>
-  &nbsp;•&nbsp;
-  <a href="teaching.html"><strong>Teaching</strong></a>
-</p>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      color: #25303b;
+      background: #f7f9fb;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+
+    /* =========================================================
+       TOP NAVIGATION
+       ========================================================= */
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e7ebef;
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 28px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 21px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #53606c;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #1769aa;
+    }
+
+
+    /* =========================================================
+       HERO AREA
+       ========================================================= */
+
+    .hero {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 45px;
+      align-items: stretch;
+    }
+
+
+    /* LEFT PROFILE CARD */
+
+    .profile-card {
+      background: #17324d;
+      color: white;
+      border-radius: 18px;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-photo {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 4px solid rgba(255, 255, 255, 0.9);
+      margin-bottom: 22px;
+    }
+
+    .profile-card h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .profile-title {
+      margin-top: 8px;
+      font-size: 17px;
+      color: #dbe8f4;
+    }
+
+    .profile-institution {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #b9cadb;
+    }
+
+    .profile-links {
+      margin-top: 25px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .profile-links a {
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .profile-links a:hover {
+      background: white;
+      color: #17324d;
+    }
+
+
+    /* RIGHT HERO CONTENT */
+
+    .intro-card {
+      background: white;
+      border-radius: 18px;
+      padding: 42px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #1769aa;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .intro-card h2 {
+      margin: 0 0 20px 0;
+      font-size: 34px;
+      line-height: 1.3;
+      color: #1f2933;
+    }
+
+    .intro-card p {
+      font-size: 17px;
+      color: #56616c;
+      margin: 0 0 15px 0;
+    }
+
+
+    /* =========================================================
+       RESEARCH TAGS
+       ========================================================= */
+
+    .tags {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      background: #eef4f8;
+      color: #294b66;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       CONTENT SECTIONS
+       ========================================================= */
+
+    .content-grid {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .info-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #243447;
+    }
+
+    .info-card p {
+      color: #5b6773;
+      margin-bottom: 20px;
+    }
+
+    .section-link {
+      text-decoration: none;
+      color: #1769aa;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       CONTACT STRIP
+       ========================================================= */
+
+    .contact-strip {
+      margin-top: 35px;
+      margin-bottom: 55px;
+      padding: 28px 32px;
+
+      background: #eaf1f6;
+      border-radius: 16px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .contact-strip h3 {
+      margin: 0 0 5px 0;
+      font-size: 19px;
+    }
+
+    .contact-strip p {
+      margin: 0;
+      color: #5d6873;
+    }
+
+    .contact-strip a {
+      text-decoration: none;
+      color: #1769aa;
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      text-align: center;
+      color: #89939d;
+      font-size: 13px;
+      padding: 28px;
+      border-top: 1px solid #e1e6ea;
+      background: white;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
+
+<header>
+
+  <nav class="navbar">
+
+    <a href="index.html" class="site-name">
+      Yuqing Fan
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="education.html">
+        Education
+      </a>
+
+      <a href="research.html">
+        Research
+      </a>
+
+      <a href="teaching.html">
+        Teaching
+      </a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+
+
+<main class="page">
+
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <section class="hero">
+
+
+    <!-- LEFT PROFILE PANEL -->
+
+    <div class="profile-card">
+
+      <img
+        src="resume/123.jpg"
+        alt="Yuqing Fan"
+        class="profile-photo"
+      >
+
+      <h1>Yuqing Fan</h1>
+
+      <div class="profile-title">
+        PhD Student in Statistics
+      </div>
+
+      <div class="profile-institution">
+        Memorial University of Newfoundland
+      </div>
+
+
+      <div class="profile-links">
+
+        <a
+          href="resume/CV_Yuqing_Fan.pdf"
+          target="_blank">
+          CV
+        </a>
+
+        <a
+          href="https://scholar.google.com/citations?user=uvYGzc4AAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer">
+          Scholar
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/yqf005678/"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a href="mailto:yuqingf@mun.ca">
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- RIGHT INTRODUCTION -->
+
+    <div class="intro-card">
+
+      <div class="eyebrow">
+        Statistics · Biostatistics · Epidemiology
+      </div>
+
+      <h2>
+        Welcome to my academic webpage.
+      </h2>
+
+      <p>
+        Hi! I am a PhD student in Statistics at
+        Memorial University of Newfoundland (MUN).
+        I completed my MSc in Statistics at MUN before
+        beginning my PhD.
+      </p>
+
+      <p>
+        Prior to joining MUN, I obtained my Bachelor of Mathematics
+        degree from the University of Waterloo.
+      </p>
+
+      <p>
+        My research interests span biostatistics and epidemiology,
+        with particular interests in cancer survivorship,
+        survival analysis, and health promotion.
+      </p>
+
+
+      <div class="tags">
+
+        <span class="tag">
+          Biostatistics
+        </span>
+
+        <span class="tag">
+          Epidemiology
+        </span>
+
+        <span class="tag">
+          Survival Analysis
+        </span>
+
+        <span class="tag">
+          Cancer Survivorship
+        </span>
+
+        <span class="tag">
+          Health Promotion
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       QUICK SECTIONS
+       ======================================================= -->
+
+  <section class="content-grid">
+
+
+    <!-- EDUCATION -->
+
+    <div class="info-card">
+
+      <h2>Education</h2>
+
+      <p>
+        My academic training spans mathematics and statistics,
+        including studies at the University of Waterloo and
+        Memorial University of Newfoundland.
+      </p>
+
+      <a
+        href="education.html"
+        class="section-link">
+        View education &amp; experience →
+      </a>
+
+    </div>
+
+
+
+    <!-- RESEARCH -->
+
+    <div class="info-card">
+
+      <h2>Research</h2>
+
+      <p>
+        My work focuses broadly on statistical methodology
+        and applications in biostatistics, epidemiology,
+        survival analysis, and related health research.
+      </p>
+
+      <a
+        href="research.html"
+        class="section-link">
+        View research &amp; publications →
+      </a>
+
+    </div>
+
+
+
+    <!-- TEACHING -->
+
+    <div class="info-card">
+
+      <h2>Teaching</h2>
+
+      <p>
+        I have teaching experience in probability and statistics
+        laboratories for students in science, business,
+        arts, and statistics.
+      </p>
+
+      <a
+        href="teaching.html"
+        class="section-link">
+        View teaching experience →
+      </a>
+
+    </div>
+
+
+
+    <!-- CV -->
+
+    <div class="info-card">
+
+      <h2>Curriculum Vitae</h2>
+
+      <p>
+        A detailed overview of my education, research,
+        publications, conference activities, and teaching
+        experience is available in my CV.
+      </p>
+
+      <a
+        href="files/Yuqing_Fan_CV.pdf"
+        target="_blank"
+        class="section-link">
+        Open CV →
+      </a>
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =======================================================
+       CONTACT
+       ======================================================= -->
+
+  <section class="contact-strip">
+
+    <div>
+
+      <h3>Contact</h3>
+
+      <p>
+        Memorial University of Newfoundland
+      </p>
+
+    </div>
+
+    <div>
+
+      <a href="mailto:yuqingf@mun.ca">
+        yuqingf@mun.ca
+      </a>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+  © 2026 Yuqing Fan · Academic Website
+
+</footer>
+
+
+</body>
+
+</html>
