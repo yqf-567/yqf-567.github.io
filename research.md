@@ -15,6 +15,6 @@ I am broadly interested in **Biostatistics** and **Epidemiology**, with a partic
 
 
 # Scripts
-1. **Li, X., Fan, Y., Cheng, S.** (2023). AIGC in China: Current developments and future outlook. https://arxiv.org/pdf/2308.08451
+1. **Li, X., Fan, Y., Cheng, S.** (2023). *AIGC in China: Current developments and future outlook*. https://arxiv.org/pdf/2308.08451
 
 
